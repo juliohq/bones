@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/ui_button.gd" type="Script" id=1]
+[ext_resource path="res://assets/sounds/ui/button_hover.wav" type="AudioStream" id=2]
+
+[node name="UIButton" type="Button"]
+margin_right = 24.0
+margin_bottom = 37.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+mouse_entered_sound = ExtResource( 2 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_UIButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_UIButton_mouse_exited"]
